@@ -112,7 +112,7 @@ long long int calculateSyntaxErrorCode(string data)
 
 int main()
 {
-	string data = "{()}[][";
+	string data = "{()}[]";
 	cout << "syntax error count value = " << calculateSyntaxErrorCode(data);
 	return 0;
 }
