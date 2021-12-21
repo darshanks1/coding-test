@@ -2,11 +2,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// given input values for all the syntax errors
 #define PARANTHESIS_ERR 3
 #define SQUAREBRAC_ERR  57
 #define CURLYBRAC_ERR   1197
 #define ANGLEBRAC_ERR   25137
 
+
+// function to return the error code value for ending chunk expressions.
 int checkErrorCount(char x) {
   int errorCount = 0;
   switch (x) {
@@ -26,6 +29,7 @@ int checkErrorCount(char x) {
 	return errorCount;
 }
 
+// function to return the error code value for starting chunk expressions.
 int checkErrorCountForOpen(char x) {
     int errorCount = 0;
   switch (x) {
@@ -45,6 +49,7 @@ int checkErrorCountForOpen(char x) {
 	return errorCount;
 }
 
+// method to calculate the total error code value for the given input string
 long long int calculateSyntaxErrorCode(string data)
 {
 	stack<char> s;
